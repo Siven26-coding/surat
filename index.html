@@ -31,7 +31,6 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <button id="dark-mode-toggle">🌙 Dark Mode</button>
       <div class="hamburger">&#9776;</div>
     </header>
 
@@ -625,26 +624,6 @@
       const nav = document.querySelector(".nav");
       hamburger.addEventListener("click", () => nav.classList.toggle("active"));
 
-      // Dark Mode Toggle
-const darkToggle = document.getElementById("dark-mode-toggle");
-darkToggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-  
-  // Optional: Save user preference
-  if (document.body.classList.contains("dark-mode")) {
-    localStorage.setItem("theme", "dark");
-    darkToggle.textContent = "☀️ Light Mode";
-  } else {
-    localStorage.setItem("theme", "light");
-    darkToggle.textContent = "🌙 Dark Mode";
-  }
-});
-
-// Load saved theme
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark-mode");
-  darkToggle.textContent = "☀️ Light Mode";
-}
 
 
       // Scroll Reveal Animation
@@ -672,6 +651,7 @@ if (localStorage.getItem("theme") === "dark") {
     </script>
   </body>
 </html>
+
 
 
 
